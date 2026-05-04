@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Access type schemaURI 
+<https://vocabulary.raid.org/access.type.schemaUri/scheme> a skos:ConceptScheme ;    
+	dcterms:title "Access Type Schema URI"@en ;
+	skos:hasTopConcept <https://vocabularies.coar-repositories.org/access_rights/> .
+
+
+<https://vocabularies.coar-repositories.org/access_rights/> a skos:Concept ;
+    skos:prefLabel "RAiD access type schema" ;
+    skos:inScheme <https://vocabulary.raid.org/access.type.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/access.type.schemaUri/scheme> .
+
+# Access type ID
+<https://vocabulary.raid.org/access.type.id/scheme> a skos:ConceptScheme ;    
+	dcterms:title "Access Type ID"@en ;
+	dcterms:description "The type of access granted to a RAiD metadata record. The values are re-used from the COAR access rights vocabulary."@en ;
+	skos:hasTopConcept <https://vocabularies.coar-repositories.org/access_rights/c_abf2/> , <https://vocabularies.coar-repositories.org/access_rights/c_f1cf/> .
+
+<https://vocabularies.coar-repositories.org/access_rights/c_abf2/> a skos:Concept ;
+    skos:inScheme <https://vocabulary.raid.org/access.type.id/scheme> ;
+	skos:prefLabel "Open Access"@en ;
+    skos:note "Open access refers to a resource that is immediately and permanently online, and free for all on the Web, without financial and technical barriers.The resource is either stored in the repository or referenced to an external journal or trustworthy archive."@en ;
+	skos:definition "a RAiD metadata record that is openly available to all users without any restrictions or limitations."@en .
+
+<https://vocabularies.coar-repositories.org/access_rights/c_f1cf/> a skos:Concept ;
+    skos:inScheme <https://vocabulary.raid.org/access.type.id/scheme> ;
+    skos:prefLabel "Embargoed Access"@en ;
+    skos:note "Embargoed access refers to a resource that is metadata only access until released for open access on a certain date. Embargoes can be required by publishers and funders policies, or set by the author (e.g such as in the case of theses and dissertations)."@en ;
+	skos:definition "a RAiD metadata record that is only available to authorized users or under specific conditions."@en .

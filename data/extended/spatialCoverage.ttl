@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Spatial coverage schema URI 
+
+<https://vocabulary.raid.org/spatialCoverage.schemaUri/scheme> a skos:ConceptScheme ;
+    dcterms:title "Spatial Coverage Schema URI"@en ;
+    skos:hasTopConcept 
+        <https://www.openstreetmap.org/> ,
+        <https://www.geonames.org/> .
+
+
+<https://www.openstreetmap.org/> a skos:Concept ;
+    skos:prefLabel "Openstreetmap link" ;
+    skos:description "Link must include osmtype, osmid and class parameters e.g. https://www.openstreetmap.org/ui/details.html?osmtype=R&osmid=1947835&class=boundary"@en ;        
+    skos:inScheme <https://vocabulary.raid.org/spatialCoverage.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/spatialCoverage.schemaUri/scheme> .
+
+
+<https://www.geonames.org/> a skos:Concept ;
+    skos:prefLabel "Geonames document URI"@en ;
+    skos:description "Link to the html document that describes the location e.g. https://www.geonames.org/264371/athens.html"@en ;
+    skos:inScheme <https://vocabulary.raid.org/spatialCoverage.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/spatialCoverage.schemaUri/scheme> .
+

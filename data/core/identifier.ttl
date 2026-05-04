@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Identifier schema URI
+
+<https://vocabulary.raid.org/identifier.schemaUri/scheme> a skos:ConceptScheme ;    
+	dcterms:title "Identifier Schema URI"@en ;
+    skos:hasTopConcept <https://raid.org/> .
+
+<https://raid.org/> a skos:Concept ;
+    skos:prefLabel "RAiD identifier schema" ;
+    skos:inScheme <https://vocabulary.raid.org/identifier.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/identifier.schemaUri/scheme> .
+
+# Identifier license
+
+<https://vocabulary.raid.org/identifier.license/scheme> a skos:ConceptScheme ;    
+	dcterms:title "Metadata licenses"@en ;
+    skos:hasTopConcept <https://vocabulary.raid.org/identifier.license/173> .
+
+<https://vocabulary.raid.org/identifier.license/173> a skos:Concept ;
+    skos:prefLabel "Creative Commons CC-0" ;
+    rdfs:seeAlso <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    skos:inScheme <https://vocabulary.raid.org/identifier.license/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/identifier.license/scheme> .
+    

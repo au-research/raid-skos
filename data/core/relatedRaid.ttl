@@ -1,0 +1,83 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Related RAiD type schema URI
+
+<https://vocabulary.raid.org/relatedRaid.type.schemaUri/scheme> a skos:ConceptScheme ;
+    dcterms:title "Related RAiD Type Schema URI"@en ;
+    dcterms:description "The URI of the schema used to declare the type of relationship between RAiDs"@en ;
+    skos:hasTopConcept <https://vocabulary.raid.org/relatedRaid.type.schema/367> .
+
+<https://vocabulary.raid.org/relatedRaid.type.schema/367> a skos:Concept ; 
+    skos:prefLabel "Related RAiD type scheme"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedRaid.type.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedRaid.type.schemaUri/scheme> .
+
+# Related RAiD type id 
+
+<https://vocabulary.raid.org/relatedRaid.type.id/scheme> a skos:ConceptScheme ;
+    dcterms:title "Related RAiD Type ID"@en ;
+    dcterms:description "a description of the relationship between the activity being registered and the related resource"@en ;
+    skos:note "Controlled list is a subset of DataCite Schema v4.4 Table 8 ‘Description of relatedIdentifierType’. All list items appear in the DataCite Schema."@en ;
+	skos:hasTopConcept 
+        <https://vocabulary.raid.org/relatedRaid.type.schema/198> ,
+        <https://vocabulary.raid.org/relatedRaid.type.schema/199> , 
+        <https://vocabulary.raid.org/relatedRaid.type.schema/200> , 
+        <https://vocabulary.raid.org/relatedRaid.type.schema/201> , 
+        <https://vocabulary.raid.org/relatedRaid.type.schema/202> , 
+        <https://vocabulary.raid.org/relatedRaid.type.schema/203> , 
+        <https://vocabulary.raid.org/relatedRaid.type.schema/204> , 
+        <https://vocabulary.raid.org/relatedRaid.type.schema/205> .
+
+<https://vocabulary.raid.org/relatedRaid.type.schema/204> a skos:Concept ;
+	skos:definition "Relates a subsequent project to the project that spawned it; continues the research of the original project in a more direct way that 'IsSourceOf'"@en ;
+	skos:prefLabel "Continues"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedRaid.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedRaid.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedRaid.type.schema/201> a skos:Concept ;
+	skos:definition "Relates a parent project to its subproject(s)"@en ;
+	skos:prefLabel "HasPart"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedRaid.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedRaid.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedRaid.type.schema/203> a skos:Concept ;
+	skos:definition "Relates a project to a subsequent project that continues the research of the original project in a more direct way than 'IsSourceOf'"@en ;
+	skos:prefLabel "IsContinuedBy"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedRaid.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedRaid.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedRaid.type.schema/200> a skos:Concept ;
+	skos:definition "Relates successor project(s) that were inspired by or spun out of the original project in a less direct way than 'Continues' (pairs with 'IsSourceOf')"@en ;
+	skos:prefLabel "IsDerivedFrom"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedRaid.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedRaid.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedRaid.type.schema/205> a skos:Concept ;
+	skos:definition "The duplicate RAiD being eliminated should be related to the one being kept with 'isObsoletedBy'"@en ;
+	skos:scopeNote "For resolving duplicate RAiDs."@en ;
+	skos:prefLabel "IsObsoletedBy"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedRaid.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedRaid.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedRaid.type.schema/202> a skos:Concept ;
+	skos:definition "Relates a subproject back to its parent project"@en ;
+	skos:prefLabel "IsPartOf"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedRaid.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedRaid.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedRaid.type.schema/199> a skos:Concept ;
+	skos:definition "Relates a project to successor project(s) that were inspired by or spun out of the original project in a less direct way than 'Continues' (pairs with 'IsDerivedFrom')"@en ;
+	skos:prefLabel "IsSourceOf"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedRaid.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedRaid.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedRaid.type.schema/198> a skos:Concept ;
+	skos:definition "The duplicate RAiD that is being kept should 'Obsolete' the RAiD being eliminated."@en ;
+	skos:scopeNote "For resolving duplicate RAiDs."@en ;
+	skos:prefLabel "Obsoletes"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedRaid.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedRaid.type.id/scheme> .

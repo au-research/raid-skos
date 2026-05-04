@@ -1,0 +1,52 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Title type schema URI
+<https://vocabulary.raid.org/title.type.schemaUri/scheme> a skos:ConceptScheme ;
+    dcterms:title "Title Type Schema URI"@en ;
+    dcterms:description "the URI of the title type schema"@en ;
+    skos:hasTopConcept <https://vocabulary.raid.org/title.type.schema/376> .
+
+<https://vocabulary.raid.org/title.type.schema/376> a skos:Concept ; 
+    skos:prefLabel "RAiD title type scheme"@en ;
+    skos:inScheme <https://vocabulary.raid.org/title.type.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/title.type.schemaUri/scheme> .
+
+# Title type id 
+
+<https://vocabulary.raid.org/title.type.id/scheme> a skos:ConceptScheme ;
+    dcterms:title "Title Type ID"@en ;
+    dcterms:description "The type of title"@en ;
+    skos:hasTopConcept
+        <https://vocabulary.raid.org/title.type.schema/156> ,
+        <https://vocabulary.raid.org/title.type.schema/4> ,
+        <https://vocabulary.raid.org/title.type.schema/5> ,
+        <https://vocabulary.raid.org/title.type.schema/157> .
+
+<https://vocabulary.raid.org/title.type.schema/156> a skos:Concept ;
+	skos:prefLabel "Acronym"@en ;
+	skos:inScheme <https://vocabulary.raid.org/title.type.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/title.type.id/scheme> .
+
+<https://vocabulary.raid.org/title.type.schema/4> a skos:Concept ;
+	skos:prefLabel "Alternative"@en ;
+	skos:inScheme <https://vocabulary.raid.org/title.type.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/title.type.id/scheme> ;
+    skos:definition "Additional full description or abstract. Includes subtitles and other supplemental or alternative titles."@en .
+
+
+<https://vocabulary.raid.org/title.type.schema/5> a skos:Concept ;
+	skos:prefLabel "Primary"@en ;
+    skos:definition "Preferred full description or abstract."@en ;
+	skos:inScheme <https://vocabulary.raid.org/title.type.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/title.type.id/scheme> .
+
+
+<https://vocabulary.raid.org/title.type.schema/157> a skos:Concept ;
+	skos:prefLabel "Short"@en ;
+	skos:inScheme <https://vocabulary.raid.org/title.type.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/title.type.id/scheme> .
+

@@ -1,0 +1,78 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Description type schema URI
+<https://vocabulary.raid.org/description.type.schemaUri/scheme> a skos:ConceptScheme ;    
+	dcterms:title "Description Type Schema URI"@en ;
+	skos:hasTopConcept <https://vocabulary.raid.org/description.type.schema/320> .
+
+<https://vocabulary.raid.org/description.type.schema/320> a skos:Concept ;
+    skos:prefLabel "RAiD description type schema" ;
+    skos:inScheme <https://vocabulary.raid.org/description.type.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/description.type.schemaUri/scheme> .
+
+# Description type id 
+<https://vocabulary.raid.org/description.type.id/scheme> a skos:ConceptScheme ;    
+	dcterms:title "Description Type ID"@en ;
+	skos:hasTopConcept 
+        <https://vocabulary.raid.org/description.type.schema/319> , 
+        <https://vocabulary.raid.org/description.type.schema/3> , 
+        <https://vocabulary.raid.org/description.type.schema/8> , 
+        <https://vocabulary.raid.org/description.type.schema/7> , 
+        <https://vocabulary.raid.org/description.type.schema/6> , 
+        <https://vocabulary.raid.org/description.type.schema/318> , 
+        <https://vocabulary.raid.org/description.type.schema/9> , 
+        <https://vocabulary.raid.org/description.type.schema/392> .
+
+
+<https://vocabulary.raid.org/description.type.schema/319> a skos:Concept ;
+	skos:prefLabel "Alternative"@en ;
+	skos:definition "Additional full description or abstract"@en ;
+	skos:inScheme <https://vocabulary.raid.org/description.type.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/description.type.id/scheme> .
+
+<https://vocabulary.raid.org/description.type.schema/3> a skos:Concept ;
+	skos:prefLabel "Brief"@en ;
+	skos:definition "Brief description (shorter than 'Primary')"@en ;
+	skos:inScheme <https://vocabulary.raid.org/description.type.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/description.type.id/scheme> .    
+
+<https://vocabulary.raid.org/description.type.schema/8> a skos:Concept ;
+	skos:prefLabel "Methods"@en ;
+	skos:definition "Statement of research method or approach"@en ;
+	skos:inScheme <https://vocabulary.raid.org/description.type.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/description.type.id/scheme> . 
+
+<https://vocabulary.raid.org/description.type.schema/7> a skos:Concept ;
+	skos:prefLabel "Objectives"@en ;
+	skos:definition "Statement of research objective, aim, or anticipated outcome"@en ;
+	skos:inScheme <https://vocabulary.raid.org/description.type.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/description.type.id/scheme> .             
+
+<https://vocabulary.raid.org/description.type.schema/6> a skos:Concept ;
+	skos:prefLabel "Other"@en ;
+	skos:definition "Any other descriptive information, e.g. a note or similar."@en ;
+	skos:inScheme <https://vocabulary.raid.org/description.type.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/description.type.id/scheme> .
+
+<https://vocabulary.raid.org/description.type.schema/318> a skos:Concept ;
+	skos:prefLabel "Primary"@en ;
+	skos:definition "Preferred full description or abstract"@en ;
+	skos:inScheme <https://vocabulary.raid.org/description.type.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/description.type.id/scheme> .          
+
+<https://vocabulary.raid.org/description.type.schema/9> a skos:Concept ;
+	skos:prefLabel "Significance statement"@en ;
+	skos:definition "Statement of research significance or anticipated impact"@en ;
+	skos:inScheme <https://vocabulary.raid.org/description.type.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/description.type.id/scheme> .          
+
+<https://vocabulary.raid.org/description.type.schema/392> a skos:Concept ;
+	skos:prefLabel "Acknowledgements"@en ;
+	skos:definition "Acknowledgement of participants not listed as Contributors (people and organisations)."@en ;
+	skos:inScheme <https://vocabulary.raid.org/description.type.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/description.type.id/scheme> .          

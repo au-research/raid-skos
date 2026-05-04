@@ -1,0 +1,196 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Contributor id schema uri
+
+<https://vocabulary.raid.org/contributor.id.schemaUri/scheme> a skos:ConceptScheme ;    
+	dcterms:title "Contributor ID Schema URI"@en ;
+    skos:hasTopConcept <https://orcid.org/> ;
+    skos:hasTopConcept <https://isni.org/> .
+
+<https://orcid.org/> a skos:Concept ;
+    skos:prefLabel "ORCID contributor ID schema" ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.id.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.id.schemaUri/scheme> ;
+    rdfs:seeAlso <https://orcid.org/> .
+
+<https://sandbox.orcid.org> a skos:Concept: ;
+    skos:prefLabel "ORCID SANDBOX contributor ID schema" ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.id.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.id.schemaUri/scheme> .
+
+<https://isni.org/> a skos:Concept ;
+    skos:prefLabel "ISNI contributor ID schema" ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.id.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.id.schemaUri/scheme> ;
+    rdfs:seeAlso <https://isni.org/> .
+
+
+# Contributor position schemaUri
+<https://vocabulary.raid.org/contributor.position.schemaUri/scheme> a skos:ConceptScheme ;    
+	dcterms:title "Contributor Position Schema URI"@en ;
+    skos:hasTopConcept <https://vocabulary.raid.org/contributor.position.schema/305> .
+
+<https://vocabulary.raid.org/contributor.position.schema/305> a skos:Concept ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.position.schemaUri/scheme> ;
+    skos:prefLabel "RAiD contributor position schema" ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.position.schemaUri/scheme> .
+
+
+
+# Contributor position id 
+<https://vocabulary.raid.org/contributor.position.id/scheme> a skos:ConceptScheme ;    
+	dcterms:title "Contributor Position ID"@en ;
+	skos:hasTopConcept <https://vocabulary.raid.org/contributor.position.schema/308> , <https://vocabulary.raid.org/contributor.position.schema/310> , <https://vocabulary.raid.org/contributor.position.schema/311> , <https://vocabulary.raid.org/contributor.position.schema/309> , <https://vocabulary.raid.org/contributor.position.schema/307> .
+
+<https://vocabulary.raid.org/contributor.position.schema/307> a skos:Concept ;
+	skos:prefLabel "Principal or Chief Investigator"@en ;
+	skos:definition "Principal investigator refers to the person(s) in charge of a research project"@en ;
+	skos:inScheme <https://vocabulary.raid.org/contributor.position.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/contributor.position.id/scheme> .
+
+<https://vocabulary.raid.org/contributor.position.schema/308> a skos:Concept ;
+	skos:prefLabel "Co-investigator or Collaborator"@en ;
+	skos:definition "A Co-Investigator is a senior or key investigator involved in a research project who does not have the overall responsibility and authority of the Principal Investigator"@en ;
+	skos:inScheme <https://vocabulary.raid.org/contributor.position.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/contributor.position.id/scheme> .
+
+<https://vocabulary.raid.org/contributor.position.schema/309> a skos:Concept ;
+	skos:prefLabel "Partner Investigator"@en ;
+	skos:definition "Industry, government, or community collaborator"@en ;
+	skos:inScheme <https://vocabulary.raid.org/contributor.position.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/contributor.position.id/scheme> .
+
+<https://vocabulary.raid.org/contributor.position.schema/310> a skos:Concept ;
+	skos:prefLabel "Consultant "@en ;
+	skos:definition "consultant or contractor hired by the project"@en ;
+	skos:inScheme <https://vocabulary.raid.org/contributor.position.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/contributor.position.id/scheme> .
+
+<https://vocabulary.raid.org/contributor.position.schema/311> a skos:Concept ;
+	skos:prefLabel "Other Participant"@en ;
+	skos:definition "Not covered by one of the positions above: i.e., ‘member’ or ‘other significant contributor’"@en ;
+	skos:inScheme <https://vocabulary.raid.org/contributor.position.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/contributor.position.id/scheme> .
+
+# Contributor role schemaUri
+
+<https://vocabulary.raid.org/contributor.role.schemaUri/scheme> a skos:ConceptScheme ;    
+	dcterms:title "Contributor Role Schema URI"@en ;
+    skos:hasTopConcept <https://credit.niso.org/> .
+
+<https://credit.niso.org/> a skos:Concept ;
+    skos:prefLabel "RAiD contributor role schema" ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.role.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.role.schemaUri/scheme> .
+
+
+# Contributor role id 
+
+<https://vocabulary.raid.org/contributor.role.id/scheme> a skos:ConceptScheme ;
+	dcterms:title "Contributor Role ID"@en ;
+	dcterms:description "a contributor’s (person) role(s) on the Project"@en ;
+	skos:hasTopConcept 
+		<https://credit.niso.org/contributor-roles/conceptualization/>,
+		<https://credit.niso.org/contributor-roles/visualization/>,
+		<https://credit.niso.org/contributor-roles/data-curation/>,
+		<https://credit.niso.org/contributor-roles/writing-original-draft/>,
+		<https://credit.niso.org/contributor-roles/formal-analysis/>,
+		<https://credit.niso.org/contributor-roles/writing-review-editing/>,
+		<https://credit.niso.org/contributor-roles/funding-acquisition/>,
+		<https://credit.niso.org/contributor-roles/investigation/>,
+		<https://credit.niso.org/contributor-roles/methodology/>,
+		<https://credit.niso.org/contributor-roles/project-administration/>,
+		<https://credit.niso.org/contributor-roles/resources/>,
+		<https://credit.niso.org/contributor-roles/software/>,
+		<https://credit.niso.org/contributor-roles/supervision/>,
+		<https://credit.niso.org/contributor-roles/validation/> .
+
+<https://credit.niso.org/contributor-roles/conceptualization/> a skos:Concept ;
+	skos:prefLabel "Conceptualization"@en ;
+	skos:definition "Ideas; formulation or evolution of overarching research goals and aims."@en ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.role.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.role.id/scheme> .
+
+<https://credit.niso.org/contributor-roles/visualization/> a skos:Concept ;
+	skos:prefLabel "Visualization"@en ;
+	skos:definition "Preparation, creation and/or presentation of the published work, specifically visualization/data presentation."@en ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.role.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.role.id/scheme> .
+
+
+
+<https://credit.niso.org/contributor-roles/data-curation/> a skos:Concept ;
+	skos:prefLabel "Data curation"@en ;
+	skos:definition "Management activities to annotate (produce metadata), scrub data and maintain research data (including software code, where it is necessary for interpreting the data itself) for initial use and later re-use."@en ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.role.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.role.id/scheme> .
+
+<https://credit.niso.org/contributor-roles/writing-original-draft/>  a skos:Concept ;
+	skos:prefLabel "Writing – original draft"@en ;
+	skos:definition "Preparation, creation and/or presentation of the published work, specifically writing the initial draft (including substantive translation)."@en ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.role.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.role.id/scheme> .
+
+ <https://credit.niso.org/contributor-roles/formal-analysis/> a skos:Concept ;
+	skos:prefLabel "Formal analysis"@en ;
+	skos:definition "Application of statistical, mathematical, computational, or other formal techniques to analyse or synthesize study data."@en ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.role.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.role.id/scheme> .
+
+ <https://credit.niso.org/contributor-roles/writing-review-editing/> a skos:Concept ;
+	skos:prefLabel "Writing – review & editing"@en ;
+	skos:definition "Preparation, creation and/or presentation of the published work by those from the original research group, specifically critical review, commentary or revision – including pre- or post-publication stages."@en ;	
+    skos:inScheme <https://vocabulary.raid.org/contributor.role.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.role.id/scheme> .
+
+<https://credit.niso.org/contributor-roles/funding-acquisition/> a skos:Concept ;
+	skos:prefLabel "Funding acquisition"@en ;
+	skos:definition "Acquisition of the financial support for the project leading to this publication."@en ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.role.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.role.id/scheme> .
+
+<https://credit.niso.org/contributor-roles/investigation/> a skos:Concept ;
+	skos:prefLabel "Investigation"@en ;
+	skos:definition "Conducting a research and investigation process, specifically performing the experiments, or data/evidence collection."@en ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.role.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.role.id/scheme> .
+
+<https://credit.niso.org/contributor-roles/methodology/>  a skos:Concept ;
+	skos:prefLabel "Methodology"@en ;
+	skos:definition "Development or design of methodology; creation of models."@en ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.role.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.role.id/scheme> .
+
+<https://credit.niso.org/contributor-roles/project-administration/> a skos:Concept ;
+	skos:prefLabel "Project administration"@en ;
+	skos:definition "Management and coordination responsibility for the research activity planning and execution."@en ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.role.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.role.id/scheme> .
+
+<https://credit.niso.org/contributor-roles/resources/> a skos:Concept ;
+	skos:prefLabel "Resources"@en ;
+	skos:definition "Provision of study materials, reagents, materials, patients, laboratory samples, animals, instrumentation, computing resources, or other analysis tools."@en ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.role.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.role.id/scheme> .
+
+<https://credit.niso.org/contributor-roles/software/> a skos:Concept ;
+	skos:prefLabel "Software"@en ;
+	skos:definition "Programming, software development; designing computer programs; implementation of the computer code and supporting algorithms; testing of existing code components."@en ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.role.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.role.id/scheme> .
+
+ <https://credit.niso.org/contributor-roles/supervision/> a skos:Concept ;
+	skos:prefLabel "Supervision"@en ;
+	skos:definition "Oversight and leadership responsibility for the research activity planning and execution, including mentorship external to the core team."@en ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.role.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.role.id/scheme> .
+				
+ <https://credit.niso.org/contributor-roles/validation/> a skos:Concept ;
+	skos:prefLabel "Validation"@en ;
+	skos:definition "Verification, whether as a part of the activity or separate, of the overall replication/reproducibility of results/experiments and other research outputs."@en ;
+    skos:inScheme <https://vocabulary.raid.org/contributor.role.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/contributor.role.id/scheme> .

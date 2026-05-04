@@ -1,0 +1,278 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Related object id schema URI 
+<https://vocabulary.raid.org/relatedObject.schemaUri/scheme> a skos:ConceptScheme ;
+	dcterms:title "Related Object ID Schema URI"@en ;
+	skos:hasTopConcept 
+        <https://doi.org/> ,
+        <https://hdl.handle.net/> ,
+        <https://archive.org/> ,
+        <https://arks.org/> ,
+        <https://scicrunch.org/resolver/> ,
+        <https://www.isbn-international.org/> .
+    
+<https://doi.org/> a skos:Concept ; 
+    skos:prefLabel "DOI" ;
+    skos:definition "All DOIs, including IGSNs, CrossRef Publication IDs or Grant IDs, DataCite DOIs, instrument DOIs, etc."@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.schemaUri/scheme> .
+
+ <https://hdl.handle.net/> a skos:Concept ; 
+    skos:prefLabel "Handle" ;
+    skos:definition "All non-DOI handles."@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.schemaUri/scheme> .
+
+<https://archive.org/> a skos:Concept ;
+    skos:prefLabel "Archive.org" ;
+    skos:definition "Fallback for any Object that has no ID other than a webpage - a snapshot must be taken from archive.org and that link inserted into the RAiD."@en ; 
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.schemaUri/scheme> .
+
+<https://arks.org/> a skos:Concept ; 
+    skos:prefLabel "ARK"@en ;
+    skos:definition "ARK"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.schemaUri/scheme> .
+
+<https://scicrunch.org/resolver/> a skos:Concept ; 
+    skos:prefLabel "RRID"@en ;
+    skos:definition "RRID"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.schemaUri/scheme> .
+
+<https://www.isbn-international.org/> a skos:Concept ; 
+    skos:prefLabel "ISBN"@en ;
+    skos:definition "ISBN"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.schemaUri/scheme> .
+
+
+# Related object category schema URI 
+
+<https://vocabulary.raid.org/relatedObject.category.schemaUri/scheme> a skos:ConceptScheme ;    
+	dcterms:title "Related Object Category Schema URI"@en ;
+    skos:hasTopConcept <https://vocabulary.raid.org/relatedObject.category.schemaUri/386> .
+
+<https://vocabulary.raid.org/relatedObject.category.schemaUri/386> a skos:Concept ;
+    skos:prefLabel "RAiD related object category schema" ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.category.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.category.schemaUri/scheme> .
+
+
+
+# Related object category id 
+
+<https://vocabulary.raid.org/relatedObject.category.id/scheme> a skos:ConceptScheme ;   
+    dcterms:title "Related Object Category ID" ;
+    skos:hasTopConcept <https://vocabulary.raid.org/relatedObject.category.id/190> ;
+    skos:hasTopConcept <https://vocabulary.raid.org/relatedObject.category.id/191> ;
+    skos:hasTopConcept <https://vocabulary.raid.org/relatedObject.category.id/192> .
+
+<https://vocabulary.raid.org/relatedObject.category.id/190> a skos:Concept ;
+    skos:prefLabel "Output"@en ;
+    skos:definition "A related object produced directly by the project and intended for publication or other external use"@en ;
+	skos:inScheme <https://vocabulary.raid.org/relatedObject.category.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/relatedObject.category.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.category.id/191> a skos:Concept ;
+    skos:prefLabel "Input"@en ;
+    skos:definition "A related object used or referenced by the project"@en ;
+	skos:inScheme <https://vocabulary.raid.org/relatedObject.category.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/relatedObject.category.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.category.id/192> a skos:Concept ;
+    skos:prefLabel "Internal process document or artefact"@en ;
+    skos:definition "A related object, such as a Data Management Plan, produced by the project for internal use"@en ;
+	skos:inScheme <https://vocabulary.raid.org/relatedObject.category.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/relatedObject.category.id/scheme> .
+
+# Related object type schema URI 
+<https://vocabulary.raid.org/relatedObject.type.schemaUri/scheme> a skos:ConceptScheme ;
+    dcterms:title "Related Object Type Schema URI"@en ;
+    skos:hasTopConcept <https://vocabulary.raid.org/relatedObject.type.schema/329> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/329> a skos:Concept ;
+    skos:prefLabel "RAiD related object type schema"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.schemaUri/scheme> .
+
+# Related object type id 
+
+<https://vocabulary.raid.org/relatedObject.type.id/scheme> a skos:ConceptScheme ;
+    dcterms:title "Related Object Type ID"@en ; 
+    skos:hasTopConcept 
+        <https://vocabulary.raid.org/relatedObject.type.schema/273> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/258> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/271> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/256> ,
+        <https://vocabulary.raid.org/relatedObject.type.schema/264> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/248> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/262> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/255> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/269> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/253> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/260> ,
+        <https://vocabulary.raid.org/relatedObject.type.schema/272> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/257> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/266> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/250> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/267> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/263> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/247> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/270> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/254> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/268> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/252> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/274> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/259> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/261> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/251> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/265> , 
+        <https://vocabulary.raid.org/relatedObject.type.schema/249> .
+
+
+<https://vocabulary.raid.org/relatedObject.type.schema/273> a skos:Concept ;
+	skos:prefLabel "Audiovisual"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/258> a skos:Concept ;
+	skos:prefLabel "Book"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/271> a skos:Concept ;
+	skos:prefLabel "Book Chapter"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/256> a skos:Concept ;
+	skos:prefLabel "Computational Notebook"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/264> a skos:Concept ;
+	skos:prefLabel "Conference Paper"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/248> a skos:Concept ;
+	skos:prefLabel "Conference Poster"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/262> a skos:Concept ;
+	skos:prefLabel "Conference Proceeding"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/255> a skos:Concept ;
+	skos:prefLabel "Data Paper"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/269> a skos:Concept ;
+	skos:prefLabel "Dataset"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/253> a skos:Concept ;
+	skos:prefLabel "Dissertation"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/260> a skos:Concept ;
+	skos:prefLabel "Event"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/272> a skos:Concept ;
+	skos:definition "Includes ‘grant’ or other cash or in-kind awards."@en ;
+	skos:prefLabel "Funding"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/257> a skos:Concept ;
+	skos:prefLabel "Image"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/266> a skos:Concept ;
+	skos:prefLabel "Instrument"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/250> a skos:Concept ;
+	skos:prefLabel "Journal Article"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/267> a skos:Concept ;
+	skos:prefLabel "Learning Object"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/263> a skos:Concept ;
+	skos:prefLabel "Model"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/247> a skos:Concept ;
+	skos:prefLabel "Output Management Plan"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/270> a skos:Concept ;
+	skos:prefLabel "Physical Object"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/254> a skos:Concept ;
+	skos:prefLabel "Preprint"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/268> a skos:Concept ;
+	skos:prefLabel "Prize"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/252> a skos:Concept ;
+	skos:prefLabel "Report"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/274> a skos:Concept ;
+	skos:prefLabel "Service"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/259> a skos:Concept ;
+	skos:prefLabel "Software"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/261> a skos:Concept ;
+	skos:prefLabel "Sound"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/251> a skos:Concept ;
+	skos:prefLabel "Standard"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/265> a skos:Concept ;
+	skos:prefLabel "Text"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .
+
+<https://vocabulary.raid.org/relatedObject.type.schema/249> a skos:Concept ;
+	skos:prefLabel "Workflow"@en ;
+    skos:inScheme <https://vocabulary.raid.org/relatedObject.type.id/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/relatedObject.type.id/scheme> .

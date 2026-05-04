@@ -1,0 +1,20 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# TraditionalKnowledge schema URI 
+
+<https://vocabulary.raid.org/traditionalKnowledgeLabel.schemaUri/scheme> a skos:ConceptScheme ;
+    dcterms:title "TraditionalKnowledge Schema URI"@en ;
+    skos:hasTopConcept 
+        <https://localcontexts.org/labels/traditional-knowledge-labels/> .
+
+<https://localcontexts.org/labels/traditional-knowledge-labels/> a skos:Concept ;
+    skos:prefLabel "Local contexts hub"@en ;
+    rdfs:seeAlso <https://localcontexts.org/labels/traditional-knowledge-labels/> ;
+    skos:inScheme <https://vocabulary.raid.org/traditionalKnowledgeLabel.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/traditionalKnowledgeLabel.schemaUri/scheme> .
+

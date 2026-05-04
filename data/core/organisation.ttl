@@ -1,0 +1,73 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Organisation role schema uri 
+
+<https://vocabulary.raid.org/organisation.role.schemaUri/scheme> a skos:ConceptScheme ;    
+	dcterms:title "Organisation Role Schema URI"@en ;
+    skos:hasTopConcept <https://vocabulary.raid.org/organisation.role.schema/359> .
+
+<https://vocabulary.raid.org/organisation.role.schema/359> a skos:Concept ;
+    skos:prefLabel "RAiD organisation roles schema" ;
+    skos:inScheme <https://vocabulary.raid.org/organisation.role.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/organisation.role.schemaUri/scheme> .
+
+# Organisation role id 
+
+<https://vocabulary.raid.org/organisation.role.id/scheme> a skos:ConceptScheme ;    
+	dcterms:title "Organisation Role ID"@en ;
+    skos:hasTopConcept 
+        <https://vocabulary.raid.org/organisation.role.schema/182> , 
+        <https://vocabulary.raid.org/organisation.role.schema/183> , 
+        <https://vocabulary.raid.org/organisation.role.schema/184> ,
+        <https://vocabulary.raid.org/organisation.role.schema/185> , 
+        <https://vocabulary.raid.org/organisation.role.schema/186> , 
+        <https://vocabulary.raid.org/organisation.role.schema/187> ,
+        <https://vocabulary.raid.org/organisation.role.schema/188> . 
+
+<https://vocabulary.raid.org/organisation.role.schema/182> a skos:Concept ;
+	skos:prefLabel "Lead Research Organisation"@en ;
+	skos:definition "The research organisation administratively responsible for the project; administering organisation"@en ;
+	skos:inScheme <https://vocabulary.raid.org/organisation.role.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/organisation.role.id/scheme> .
+
+<https://vocabulary.raid.org/organisation.role.schema/183> a skos:Concept ;
+	skos:prefLabel "Other Research Organisation"@en ;
+	skos:definition "A research organisation such as a university participating in the project, usually hosting Contributors and providing other support"@en ;
+	skos:inScheme <https://vocabulary.raid.org/organisation.role.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/organisation.role.id/scheme> .
+
+<https://vocabulary.raid.org/organisation.role.schema/184> a skos:Concept ;
+	skos:prefLabel "Partner Organisation"@en ;
+	skos:definition "A non-research organisation, such as an industry, government, or community partner that is collaborating on the project or activity, as a research partner rather than a hired consultant or contractor"@en ;
+	skos:inScheme <https://vocabulary.raid.org/organisation.role.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/organisation.role.id/scheme> .
+
+<https://vocabulary.raid.org/organisation.role.schema/185> a skos:Concept ;
+	skos:prefLabel "Contractor"@en ;
+	skos:definition "Consultant or contractor hired by project or activity."@en ;
+	skos:inScheme <https://vocabulary.raid.org/organisation.role.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/organisation.role.id/scheme> .
+
+<https://vocabulary.raid.org/organisation.role.schema/186> a skos:Concept ;
+	skos:prefLabel "Funder"@en ;
+	skos:definition "Organisation underwriting the research via a cash or in-kind grant, prize, or investment, but not otherwise listed as a research organisation, partner organisation or contractor."@en ;
+	skos:inScheme <https://vocabulary.raid.org/organisation.role.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/organisation.role.id/scheme> .
+
+<https://vocabulary.raid.org/organisation.role.schema/187> a skos:Concept ;
+	skos:prefLabel "Facility"@en ;
+	skos:definition "Organisation providing access to physical or digital infrastructure, but not otherwise listed as a research organisation, partner organisation or contractor."@en ;
+	skos:inScheme <https://vocabulary.raid.org/organisation.role.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/organisation.role.id/scheme> .
+
+<https://vocabulary.raid.org/organisation.role.schema/188> a skos:Concept ;
+	skos:prefLabel "Other Organisation"@en ;
+    skos:definition "Any other participating organisation not covered by the roles above."@en ;
+	skos:inScheme <https://vocabulary.raid.org/organisation.role.id/scheme> ;
+	skos:topConceptOf <https://vocabulary.raid.org/organisation.role.id/scheme> .
+

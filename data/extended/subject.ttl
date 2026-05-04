@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Subject schema URI 
+
+<https://vocabulary.raid.org/subject.schemaUri/scheme> a skos:ConceptScheme ;
+    dcterms:title "Subject Schema URI"@en ;
+    skos:hasTopConcept 
+        <https://vocabs.ardc.edu.au/viewById/316> ,
+        <https://vocabs.ardc.edu.au/viewById/317> ,
+        <https://linked.data.gov.au/def/anzsrc-for/2020> ,
+        <https://linked.data.gov.au/def/anzsrc-seo/2020> .
+
+<https://vocabs.ardc.edu.au/viewById/316> a skos:Concept ;
+    skos:prefLabel "Australian and New Zealand Standard Research Classification 2020: Fields of Research"@en ;
+    rdfs:seeAlso <https://www.abs.gov.au/statistics/classifications/australian-and-new-zealand-standard-research-classification-anzsrc/2020> ;
+    skos:inScheme <https://vocabulary.raid.org/subject.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/subject.schemaUri/scheme> .
+
+<https://vocabs.ardc.edu.au/viewById/317> a skos:Concept ;
+    skos:prefLabel "Australian and New Zealand Standard Research Classification 2020: Socio-Economic Objectives"@en ;
+    rdfs:seeAlso <https://www.abs.gov.au/statistics/classifications/australian-and-new-zealand-standard-research-classification-anzsrc/2020> ;
+    skos:inScheme <https://vocabulary.raid.org/subject.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/subject.schemaUri/scheme> .
+
+
+<https://linked.data.gov.au/def/anzsrc-for/2020> a skos:Concept ;
+    skos:prefLabel "1297.0 ANZSRC - Australian and New Zealand Standard Research Classification, 2020: Fields of Research (FoR)"@en ;
+    rdfs:seeAlso <https://www.abs.gov.au/AUSSTATS/abs@.nsf/mf/1297.0> ;
+    skos:inScheme <https://vocabulary.raid.org/subject.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/subject.schemaUri/scheme> .
+
+<https://linked.data.gov.au/def/anzsrc-seo/2020> a skos:Concept ;
+    skos:prefLabel "1297.0 ANZSRC - Australian and New Zealand Standard Research Classification, 2020: Socio-Economic Objectives (SEO)"@en ;
+    rdfs:seeAlso <https://www.abs.gov.au/AUSSTATS/abs@.nsf/mf/1297.0> ;
+    skos:inScheme <https://vocabulary.raid.org/subject.schemaUri/scheme> ;
+    skos:topConceptOf <https://vocabulary.raid.org/subject.schemaUri/scheme> .
